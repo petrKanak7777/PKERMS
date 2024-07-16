@@ -1,4 +1,4 @@
-package cz.erms.ermsEJB;
+package cz.erms.ermsejb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class ErmsEjbApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ErmsEjbApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ErmsEjbApplication.class, args);
+    }
 
 }
 
 @RestController
 class TestController {
 
-	@GetMapping("/test")
-	String hello() {
-		return "Hello World";
-	}
+    @GetMapping("/test")
+    String hello() {
+        return "Hello World";
+    }
 }
