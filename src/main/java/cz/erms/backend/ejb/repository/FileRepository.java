@@ -1,6 +1,6 @@
-package cz.erms.ermsejb.ejb.repository;
+package cz.erms.backend.ejb.repository;
 
-import cz.erms.ermsejb.ejb.entity.File;
+import cz.erms.backend.ejb.entity.File;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 

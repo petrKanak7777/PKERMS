@@ -1,4 +1,4 @@
-package cz.erms.ermsejb.ejb.entity;
+package cz.erms.backend.ejb.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
@@ -22,13 +22,13 @@ import java.util.UUID;
 public class File implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "file_id", unique = true, length = 32, nullable = false)
+    @Column(name = "file_id", unique = true, length = 36, nullable = false)
     private UUID id;
 
-    @Column(name = "user_id", length = 32, nullable = false)
+    @Column(name = "user_id", length = 36, nullable = false)
     @JsonProperty("user_id")
     private UUID userId;
 
-    @Column(name = "name")
+    @Column(name = "name", length = 256, nullable = false)
     private String name;
 }

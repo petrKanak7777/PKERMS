@@ -2,7 +2,7 @@ create table file
 (
     file_id uuid default gen_random_uuid(),
     user_id uuid null,
-    name    varchar not null,
+    name    varchar(256) not null,
     primary key (file_id)
 );
 
