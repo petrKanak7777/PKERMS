@@ -17,6 +17,7 @@ import java.util.UUID;
 public class FileService {
 
     private static final String FILE_NOT_FOUND = "Related file not found";
+    private static final String ADD_FOR_TEST = "Related file not found";
 
     private final FileRepository fileRepository;
     private final FileResponseConverter fileResponseConverter;
