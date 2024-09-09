@@ -31,7 +31,7 @@ public class FileController {
     }
 
     @GetMapping("")
-    public ResponseEntity<List<FileResponse>> getAllBooks() {
+    public ResponseEntity<List<FileResponse>> getAllFiles() {
         List<FileResponse> files = fileService.getAllFiles();
         return new ResponseEntity<>(files, HttpStatus.OK);
     }
@@ -43,19 +43,19 @@ public class FileController {
     }
 
     @PostMapping("")
-    public ResponseEntity<FileResponse> createBook(@RequestBody @Valid FileRequest fileRequest) {
+    public ResponseEntity<FileResponse> createFile(@RequestBody @Valid FileRequest fileRequest) {
         FileResponse file = fileService.createFile(fileRequest);
         return new ResponseEntity<>(file, HttpStatus.OK);
     }
 
     @PutMapping("/{uuid}")
-    public ResponseEntity<FileResponse> updateBook(@PathVariable String uuid, @RequestBody @Valid FileRequest fileRequest) {
+    public ResponseEntity<FileResponse> updateFile(@PathVariable String uuid, @RequestBody @Valid FileRequest fileRequest) {
         FileResponse file = fileService.updateFile(UUID.fromString(uuid), fileRequest);
         return new ResponseEntity<>(file, HttpStatus.OK);
     }
 
     @DeleteMapping("/{uuid}")
-    public ResponseEntity<Void> deleteBook(@PathVariable String uuid) {
+    public ResponseEntity<Void> deleteFile(@PathVariable String uuid) {
         fileService.deleteFile(UUID.fromString(uuid));
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
