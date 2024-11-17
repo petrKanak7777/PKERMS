@@ -43,3 +43,10 @@ password: heslo1234
 
 ![img.png](files/images/img.png)
 
+### OpenAPI
+
+Api GUI:
+http://localhost:8080/swagger-ui/index.html
+
+Api definition in json:
+http://localhost:8080/v3/api-docs
