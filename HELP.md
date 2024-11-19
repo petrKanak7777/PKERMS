@@ -41,12 +41,21 @@ http://localhost:5051/login?next=/
 user: pk777@gmail.com \
 password: heslo1234
 
-![img.png](files/images/img.png)
+![img.png](files/ermsEjb/images/img.png)
 
 ### OpenAPI
 
 Api GUI:
-http://localhost:8080/swagger-ui/index.html
+http://localhost:8081/swagger-ui/index.html
 
 Api definition in json:
-http://localhost:8080/v3/api-docs
+http://localhost:8081/v3/api-docs
+
+### Application information
+
+Application runs at port: 8081.
+You can change it in configuration file.
+
+```
+server.port=8081
+```
