@@ -1,4 +1,5 @@
-CREATE ROLE IF NOT EXISTS "erms" WITH
+-- Role erms is created by default (Look on HELP.md)
+CREATE ROLE "erms" WITH
     LOGIN
     SUPERUSER
     INHERIT
@@ -12,12 +13,12 @@ CREATE ROLE IF NOT EXISTS "erms" WITH
 -- mkdir /var/lib/postgresql/data/erms
 -- chown postgres:postgres /var/lib/postgresql/data/erms
 -- DROP TABLESPACE IF EXISTS erms_ts;
-CREATE TABLESPACE IF NOT EXISTS erms_ts LOCATION '/var/lib/postgresql/data/erms';
+CREATE TABLESPACE erms_ts LOCATION '/var/lib/postgresql/data/erms';
 ALTER TABLESPACE erms_ts
   OWNER TO "erms";
 
 /* Create database erms */
-CREATE DATABASE IF NOT EXISTS "erms"
+CREATE DATABASE "erms"
     WITH
     OWNER = "erms"
     ENCODING = 'UTF8'

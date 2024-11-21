@@ -8,7 +8,7 @@
         <!-- Database connection properties -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/pKanak</property>
-        <property name="hibernate.connection.username">pKanak</property>
+        <property name="hibernate.connection.username">erms</property>
         <property name="hibernate.connection.password">heslo1234</property>
 
         <!-- Other Hibernate properties -->
