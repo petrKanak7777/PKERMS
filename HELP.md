@@ -19,10 +19,8 @@ Postgres SQL:
 docker pull postgres:16.2
 ```
 
-
-
 ```
-docker run -itd -e POSTGRES_USER=pKanak -e POSTGRES_PASSWORD=heslo1234 -p 5432:5432 -v ./data:/var/lib/postgresql/data --name pk-test-postgresql postgres
+docker run -itd -e POSTGRES_USER=pKanak -e POSTGRES_PASSWORD=heslo1234 -p 5432:5432 -v ./data:/var/lib/postgresql/data --name pk-test-postgresql postgres:16.2
 ```
 
 PGAdmin docker image:
@@ -41,6 +39,9 @@ http://localhost:5051/login?next=/
 user: pk777@gmail.com \
 password: heslo1234
 
+#### Important: #### 
+If ***host.docker.internal*** doesn't work try ***kubernetes.docker.internal***. Look on hosts (Windows: C:\Windows\System32\drivers\etc) file
+what is bind on localhost (127.0.0.1).
 ![img.png](files/ermsEjb/images/img.png)
 
 ### OpenAPI
